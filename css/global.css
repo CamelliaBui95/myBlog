@@ -3,3 +3,37 @@
 * {
     font-family: 'Poppins', sans-serif;
 }
+
+.center {
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.color-brand {
+    color: rgb(241, 168, 100);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mt-8 {
+    margin-top: 4rem;
+}
+
+.medium-large {
+    width: 80%;
+}
+
+.small {
+    width: 30%;
+}
+
+.border-1 {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
