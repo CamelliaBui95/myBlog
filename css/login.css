@@ -9,3 +9,8 @@
     background: rgb(241, 168, 100);
     color: white;
 }
+
+.message {
+    margin-top: 1.5rem;
+    color: rgb(241, 168, 100);
+}

@@ -1,3 +1,26 @@
+<?php include 'includes/login-logout.php';
+
+    $message = '';
+
+    if($logged_in) {
+        header('Location: homePage.php');
+        exit;
+    }
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $user_email = $_POST['email'];
+        $user_password = $_POST['password'];
+
+        if($user_email === $email && $user_password === $password) {
+            login();
+            header('Location: homePage.php');
+            exit;
+        } else {
+            $message = 'Email or Password Incorrect';
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +38,7 @@
     <div class="flex mt-8">
         <div class="row g-3 align-items-center border-1 pt-5 pb-5 small">
            <h2 class="text-center mt-0 mb-3">Already registered ?</h2>
-           <form class="medium-large center" action="homePage.php">
+           <form class="medium-large center" action="login.php" method="POST">
 
                 <div class="col-auto">
                     <label for="inputEmail" class="col-form-label">Email</label>
@@ -30,6 +53,7 @@
                 <div class="col-auto">
                     <input type="password" id="inputPassword" class="form-control" aria-describedby="passwordHelpInline" name="password">
                 </div>
+                <span class="message"><?= $message ?></span>
 
                 <div class="col-auto flex">
                     <input type="submit" id="submit-btn" class="form-control mt-4"  value="Log In">
