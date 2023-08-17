@@ -2,6 +2,7 @@
     session_start();
     $logged_in = $_SESSION['logged_in'] ?? false;
 
+    $username = 'Camellia';
     $email = 'camellia.bui95@gmail.com';
     $password = 'abc1234';
 
