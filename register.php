@@ -19,6 +19,19 @@
            <h2 class="text-center mt-0 mb-3">Sign Up</h2>
            <form class="medium-large center" action="register.php" method="POST">
                 <div class="col-auto">
+                    <label for="inputFirstName" class="col-form-label">First Name</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" id="inputFirstName" class="form-control" aria-describedby="firstNameHelpInline" name="firstName">
+                </div>
+                <div class="col-auto">
+                    <label for="inputLastName" class="col-form-label">Last Name</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" id="inputLastName" class="form-control" aria-describedby="lastNameHelpInline" name="lastName">
+                </div>
+
+                <div class="col-auto">
                     <label for="inputUsername" class="col-form-label">Username</label>
                 </div>
                 <div class="col-auto">
