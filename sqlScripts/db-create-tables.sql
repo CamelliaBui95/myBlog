@@ -5,7 +5,9 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
 USE `mydb` ;
 
-
+-- -----------------------------------------------------
+-- Table `mydb`.`members`
+-- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`members` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`members` (
@@ -23,6 +25,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`members` (
 ENGINE = InnoDB;
 
 
+-- -----------------------------------------------------
+-- Table `mydb`.`images`
+-- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`images` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`images` (
@@ -33,6 +38,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`images` (
 ENGINE = InnoDB;
 
 
+-- -----------------------------------------------------
+-- Table `mydb`.`categories`
+-- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`categories` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`categories` (
@@ -42,6 +50,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`categories` (
 ENGINE = InnoDB;
 
 
+-- -----------------------------------------------------
+-- Table `mydb`.`posts`
+-- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`posts` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`posts` (
