@@ -1,4 +1,5 @@
 <?php include 'includes/login-logout.php';
+      require 'includes/error-handlers.php';
     require_login($logged_in);
 ?>
 <?php include_once 'includes/header.php'?>
