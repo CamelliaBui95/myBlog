@@ -1,4 +1,5 @@
 <?php
+    include_once '.env';
     $type = "mysql";
     $server = "localhost";
     $charset = "utf8mb4";
@@ -6,13 +7,14 @@
     $db_name = "myBlogDb";
     $dsn = "$type:host=$server;dbname=$db_name;port=$port;charset=$charset";
 
-    $username = $_ENV["username"];
-    $password = $_ENV["password"];
+    // $username = $_ENV["username"];
+    // $password = $_ENV["password"];
 
-    if(!$username || !$password) {
+   
+    /*if(!$username || !$password) {
         echo "<h1>Username or Password to db is missing</h1>";
         exit;
-    }
+    }*/
 
     $options = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
