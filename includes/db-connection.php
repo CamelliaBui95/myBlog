@@ -1,20 +1,23 @@
 <?php
-    include_once '.env';
+    require_once('vendor/autoload.php'); 
+
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->safeLoad();
+
     $type = "mysql";
-    $server = "localhost";
+    $server = $_ENV['DB_SERVER'];
     $charset = "utf8mb4";
-    $port = "3036";
-    $db_name = "myBlogDb";
+    $port = $_ENV['DB_PORT'];
+    $db_name = $_ENV['DB_NAME'];
     $dsn = "$type:host=$server;dbname=$db_name;port=$port;charset=$charset";
 
-    // $username = $_ENV["username"];
-    // $password = $_ENV["password"];
-
+    $username = $_ENV['DB_USERNAME'];
+    $password = $_ENV['DB_PASSWORD'];*/
    
-    /*if(!$username || !$password) {
+    if(!$username || !$password) {
         echo "<h1>Username or Password to db is missing</h1>";
         exit;
-    }*/
+    }
 
     $options = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -28,6 +31,6 @@
         // re-throw exception as a way to handle pdo exception
         // if there is no pdo's exception handler => error shows username and password
         throw new PDOException($e->getMessage(), $e->getCode());
-    }
+    }*/
     
 ?>
