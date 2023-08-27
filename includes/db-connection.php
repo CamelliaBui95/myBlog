@@ -12,7 +12,7 @@
     $dsn = "$type:host=$server;dbname=$db_name;port=$port;charset=$charset";
 
     $username = $_ENV['DB_USERNAME'];
-    $password = $_ENV['DB_PASSWORD'];*/
+    $password = $_ENV['DB_PASSWORD'];
    
     if(!$username || !$password) {
         echo "<h1>Username or Password to db is missing</h1>";
@@ -30,7 +30,8 @@
     } catch (PDOException $e) {
         // re-throw exception as a way to handle pdo exception
         // if there is no pdo's exception handler => error shows username and password
+        var_dump($e->getMessage());
         throw new PDOException($e->getMessage(), $e->getCode());
-    }*/
+    }
     
 ?>

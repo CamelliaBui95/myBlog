@@ -1,6 +1,8 @@
 <?php include 'includes/login-logout.php';
-      //require 'includes/error-handlers.php';
+      require 'includes/error-handlers.php';
       require 'includes/db-connection.php';
+      //phpinfo();
+
     require_login($logged_in);
 ?>
 <?php include_once 'includes/header.php'?>
