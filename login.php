@@ -3,7 +3,7 @@
     $message = '';
 
     if($logged_in) {
-        header('Location: homePage.php');
+        header('Location: index.php');
         exit;
     }
 
